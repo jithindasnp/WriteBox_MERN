@@ -18,6 +18,8 @@ export default function Register() {
       alert("Password should contain Minimum 8 characters,At least one uppercase letter ,At least one lowercase letter, At least one special character")
     }
   }
+
+  
   return (
     <>
       <>
