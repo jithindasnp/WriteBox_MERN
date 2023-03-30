@@ -37,11 +37,10 @@ export default function Register() {
       alert("Password should contain Minimum 8 characters,At least one uppercase letter ,At least one lowercase letter, At least one special character")
     } else {
       axios.post('http://localhost:3001/api/register', register).then((result) => {
-        if (result) {
-          navigate('/login')
-        } else {
-          navigate('/signup')
-        }
+        alert(result.data.message)
+        console.log(result);
+      }).catch((error) => {
+        console.log(error);
       })
     }
 

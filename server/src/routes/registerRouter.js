@@ -16,7 +16,7 @@ registerRouter.post('/', async (req, res) => {
             if (oldUser) {
                 return res.status(400).json({ message: "user already exists" })
             } else {
-                const loginData = await login_tb.create({ email, password: hashed })
+                const loginData = await login_tb.create({ email, password: hashed,role:"vendor" })
                 if (!loginData) {
                     return res.status(400).json({ message: "something went wrong" })
                 } else {

@@ -1,29 +1,25 @@
 import FacebookLogin from '../components/FacebookLogin'
 import GoogleLogin from '../components/GoogleLogin'
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
 
     let navigate = useNavigate();
-    const [state,setState] = useState({})
-    const inputValues = (event)=>{
-        const {name,value} = event.target
-        setState({...state,[name]:value})
+    const [state, setState] = useState({})
+    const inputValues = (event) => {
+        const { name, value } = event.target
+        setState({ ...state, [name]: value })
 
     }
-    const submitForm = (event)=>{
+    const submitForm = (event) => {
         event.preventDefault()
         console.log(state);
-        axios.post('http://localhost:3001/api/login',state).then((result)=>{
-            localStorage.setItem("LoginId",result.data.token)
-           if(result){
-            navigate('/')
-           }else{
-            navigate('/login')
-           }
-        }).catch((err)=>{
+        axios.post('http://localhost:3001/api/login', state).then((result) => {
+            localStorage.setItem("LoginId", result.data.token)
+            console.log(result);
+        }).catch((err) => {
             console.log(err);
             console.log("error occured");
         })
@@ -62,12 +58,12 @@ function Login() {
                                         <form onSubmit={submitForm}>
                                             <div className="form-group">
                                                 <label className="form-control-label">Email Address</label>
-                                                <input type="email" className="form-control" onChange={inputValues} />
+                                                <input type="email" name='email' className="form-control" onChange={inputValues} />
                                             </div>
                                             <div className="form-group">
                                                 <label className="form-control-label">Password</label>
                                                 <div className="pass-group">
-                                                    <input type="password" className="form-control pass-input" onChange={inputValues} />
+                                                    <input type="password" name='password' className="form-control pass-input" onChange={inputValues} />
                                                     <span className="fas fa-eye toggle-password" />
                                                 </div>
                                             </div>
@@ -86,8 +82,8 @@ function Login() {
                                             </div>
                                             <hr />
                                             <div className="row  mt-4">
-                                                <GoogleLogin/>
-                                                <FacebookLogin/>
+                                                <GoogleLogin />
+                                                <FacebookLogin />
 
                                             </div>
                                             <div className="text-center dont-have">Don’t have an account? <a href="/register">Register</a></div>

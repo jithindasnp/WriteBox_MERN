@@ -4,6 +4,12 @@ const registerRouter = require('./src/routes/registerRouter');
 const loginRouter = require('./src/routes/loginRouter');
 const app = express()
 
+
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static("/public"))
+
 // app.use(cookieSession(
 //     {
 //         name:"session",
