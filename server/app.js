@@ -1,6 +1,7 @@
 const express = require ('express')
 const cors = require("cors");
 const registerRouter = require('./src/routes/registerRouter');
+const loginRouter = require('./src/routes/loginRouter');
 const app = express()
 
 app.use(cookieSession(
@@ -15,6 +16,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/api/register',registerRouter)
+app.use('/api/login',loginRouter)
 
 
 app.use(
