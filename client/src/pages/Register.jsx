@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FacebookLogin from '../components/FacebookLogin'
 import GoogleLogin from '../components/GoogleLogin'
 
 export default function Register() {
+  const [emailCheck, setemailCheck] = useState()
+  const [passCheck, setpassCheck] = useState()
+
+  const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  const validPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$/
+
+
+  const validCheck = () => {
+    if (!validEmail.test(emailCheck) ) {
+      alert("Please add a valid email")
+    }
+    if (!validPass.test(passCheck) ) {
+      alert("Password should contain Minimum 8 characters,At least one uppercase letter ,At least one lowercase letter, At least one special character")
+    }
+  }
   return (
     <>
       <>
@@ -34,7 +49,7 @@ export default function Register() {
           <div className="bg-pattern-style bg-pattern-style-register">
             <div className="content">
               {/* Register Content */}
-              <div className="account-content">
+              <div className="account-content ms-3">
                 <div className="account-box">
                   <div className="login-right">
                     <div className="login-header">
@@ -44,38 +59,13 @@ export default function Register() {
                       </p>
                     </div>
                     {/* Register Form */}
-                    <form action="index.html">
-                      <div className="row">
-                        <div className="col-lg-6">
-                          <div className="form-group">
-                            <label className="form-control-label">First Name</label>
-                            <input
-                              id="first-name"
-                              type="text"
-                              className="form-control"
-                              name="first_name"
-                              autofocus=""
-                            />
-                          </div>
-                        </div>
-                        <div className="col-lg-6">
-                          <div className="form-group">
-                            <label className="form-control-label">Last Name</label>
-                            <input
-                              id="last-name"
-                              type="text"
-                              className="form-control"
-                              name="last_name"
-                            />
-                          </div>
-                        </div>
-                      </div>
+                    <form action="index.html" >
                       <div className="form-group">
                         <label className="form-control-label">Email Address</label>
-                        <input id="email" type="email" className="form-control" />
+                        <input id="email" type="email" className="form-control" onChange={(e)=>{setemailCheck(e.target.value)}}/>
                       </div>
                       <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-12">
                           <div className="form-group">
                             <label className="form-control-label">Password</label>
                             <input
@@ -83,19 +73,7 @@ export default function Register() {
                               type="password"
                               className="form-control"
                               name="password"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-lg-6">
-                          <div className="form-group">
-                            <label className="form-control-label">
-                              Confirm Password
-                            </label>
-                            <input
-                              id="password-confirm"
-                              type="password"
-                              className="form-control"
-                              name="password_confirmation"
+                              onChange={(e)=>{setpassCheck(e.target.value)}}
                             />
                           </div>
                         </div>
@@ -127,7 +105,8 @@ export default function Register() {
                       </div>
                       <button
                         className="btn btn-primary login-btn"
-                        type="submit"
+                        type="button"
+                        onClick={() => { validCheck()}}
                         style={{ background: "#00909E", border: 0 }}
                       >
                         Create Account
@@ -137,8 +116,8 @@ export default function Register() {
                       </div>
                       <hr />
                       <div className="row  mt-4">
-                        <GoogleLogin/>
-                        <FacebookLogin/>
+                        <GoogleLogin />
+                        <FacebookLogin />
                       </div>
                       <div className="account-footer text-center mt-4 mb-2">
                         Already have an account?{" "}
