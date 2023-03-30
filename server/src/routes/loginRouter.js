@@ -1,8 +1,8 @@
 const express = require('express')
-const login_tb = require('../models/login_tb')
 const loginRouter = express.Router()
 const jwt = require('jsonwebtoken')
-const bcrypt=require('bcrypt')
+const bcrypt=require('bcryptjs')
+const login_tb = require('../modals/login')
 
 
 loginRouter.post('/', async (req, res) => {

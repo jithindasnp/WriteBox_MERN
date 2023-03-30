@@ -1,4 +1,3 @@
-import React from 'react'
 import FacebookLogin from '../components/FacebookLogin'
 import GoogleLogin from '../components/GoogleLogin'
 import React,{useState} from 'react'

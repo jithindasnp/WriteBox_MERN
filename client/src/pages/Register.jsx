@@ -1,25 +1,53 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import FacebookLogin from '../components/FacebookLogin'
 import GoogleLogin from '../components/GoogleLogin'
+import axios from 'axios'
 
 export default function Register() {
   const [emailCheck, setemailCheck] = useState()
   const [passCheck, setpassCheck] = useState()
+  const [register, setregister] = useState()
+  const navigate = useNavigate()
 
   const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   const validPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$/
 
 
   const validCheck = () => {
-    if (!validEmail.test(emailCheck) ) {
-      alert("Please add a valid email")
-    }
-    if (!validPass.test(passCheck) ) {
-      alert("Password should contain Minimum 8 characters,At least one uppercase letter ,At least one lowercase letter, At least one special character")
-    }
+
   }
 
-  
+
+  const registerInpChange = (e) => {
+    const { name, value } = e.target
+    setregister({ ...register, [name]: value })
+
+  }
+
+
+
+  //api for registeration
+  const registerSubmit = (e) => {
+    e.preventDefault()
+    if (!validEmail.test(emailCheck)) {
+      alert("Please add a valid email")
+    }
+    else if (!validPass.test(passCheck)) {
+      alert("Password should contain Minimum 8 characters,At least one uppercase letter ,At least one lowercase letter, At least one special character")
+    } else {
+      axios.post('http://localhost:3001/api/register', register).then((result) => {
+        if (result) {
+          navigate('/login')
+        } else {
+          navigate('/signup')
+        }
+      })
+    }
+
+  }
+
+
   return (
     <>
       <>
@@ -61,10 +89,10 @@ export default function Register() {
                       </p>
                     </div>
                     {/* Register Form */}
-                    <form action="index.html" >
+                    <form onSubmit={registerSubmit}>
                       <div className="form-group">
                         <label className="form-control-label">Email Address</label>
-                        <input id="email" type="email" className="form-control" onChange={(e)=>{setemailCheck(e.target.value)}}/>
+                        <input id="email" name='email' type="email" className="form-control" onChange={(e) => { setemailCheck(e.target.value); registerInpChange(e) }} />
                       </div>
                       <div className="row">
                         <div className="col-lg-12">
@@ -75,7 +103,7 @@ export default function Register() {
                               type="password"
                               className="form-control"
                               name="password"
-                              onChange={(e)=>{setpassCheck(e.target.value)}}
+                              onChange={(e) => { setpassCheck(e.target.value); registerInpChange(e) }}
                             />
                           </div>
                         </div>
@@ -107,8 +135,7 @@ export default function Register() {
                       </div>
                       <button
                         className="btn btn-primary login-btn"
-                        type="button"
-                        onClick={() => { validCheck()}}
+                        type="submit"
                         style={{ background: "#00909E", border: 0 }}
                       >
                         Create Account
@@ -123,7 +150,7 @@ export default function Register() {
                       </div>
                       <div className="account-footer text-center mt-4 mb-2">
                         Already have an account?{" "}
-                        <a className="forgot-link mb-0" href="login.html">
+                        <a className="forgot-link mb-0" href="/login">
                           Login
                         </a>
                       </div>
