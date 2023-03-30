@@ -137,8 +137,8 @@ export default function Register() {
                       </div>
                       <hr />
                       <div className="row  mt-4">
-                        <GoogleLogin/>
-                        <FacebookLogin/>
+                        <GoogleLogin />
+                        <FacebookLogin />
                       </div>
                       <div className="account-footer text-center mt-4 mb-2">
                         Already have an account?{" "}
