@@ -4,10 +4,6 @@ const bcrypt = require('bcryptjs')
 const login_tb = require('../modals/login')
 const register = require('../modals/register')
 
-
-
-
-
 //Register api
 registerRouter.post('/', async (req, res) => {
     const { email, password} = req.body
