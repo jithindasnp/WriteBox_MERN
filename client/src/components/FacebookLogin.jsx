@@ -4,7 +4,7 @@ import React from 'react'
 export default function FacebookLogin() {
 
     const facebook = () => {
-        window.open("http://localhost:3001/auth/facebook", "_self");
+        window.open("http://localhost:3001/auth/linkedin", "_self");
     };
 
     return (
