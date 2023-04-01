@@ -40,7 +40,7 @@ try {
     })
   );
 
-  router.get("/linkedin", passport.authenticate("linkedin", { scope: ['r_emailaddress', 'r_liteprofile'] }));
+  router.get("/linkedin", passport.authenticate("linkedin", { scope: ['r_liteprofile'] }));
 
   router.get(
     "/linkedin/callback",
