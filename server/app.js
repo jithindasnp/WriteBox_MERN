@@ -10,7 +10,8 @@ const passport = require('passport')
 const cookieSession = require("cookie-session");
 
 
-const passportSetup = require("../server/passportgoogle");
+const passportSetup = require("../server/passport.js");
+const authRouter = require('../server/passport.js');
 
 
 app.use(cors())
@@ -38,6 +39,7 @@ app.use(
 app.use('/api/register',registerRouter)
 app.use('/api/login',loginRouter)
 app.use("/auth",authRoute)
+app.use("/api",authRouter)
 
 app.listen('3001',()=>{
     console.log("Server is running at port 3001");
