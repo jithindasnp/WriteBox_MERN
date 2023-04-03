@@ -6,6 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
 
+    const [show,setShow] = useState(false)
 
     let navigate = useNavigate();
     const [state, setState] = useState({})
@@ -26,6 +27,10 @@ function Login() {
         })
     }
 
+    const handleShow = (e)=>{
+        setShow(!show)
+      }
+      
 
     return (
         <>
@@ -62,10 +67,10 @@ function Login() {
                                                 <input type="email" name='email' className="form-control" onChange={inputValues} />
                                             </div>
                                             <div className="form-group">
-                                                <label className="form-control-label">Password</label>
+                                                <label className="form-control-label"  >Password</label>
                                                 <div className="pass-group">
-                                                    <input type="password" name='password' className="form-control pass-input" onChange={inputValues} />
-                                                    <span className="fas fa-eye toggle-password" />
+                                                    <input type={show?"text":"password"} name='password' className="form-control pass-input" onChange={inputValues} />
+                                                    <span className="fas fa-eye toggle-password" onClick={handleShow} />
                                                 </div>
                                             </div>
                                             <div className="text-end">

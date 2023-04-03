@@ -8,6 +8,7 @@ export default function Register() {
   const [emailCheck, setemailCheck] = useState()
   const [passCheck, setpassCheck] = useState()
   const [register, setregister] = useState()
+
   const navigate = useNavigate()
 
   const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
@@ -45,6 +46,7 @@ export default function Register() {
     }
 
   }
+
 
 
   return (
@@ -96,7 +98,7 @@ export default function Register() {
                       <div className="row">
                         <div className="col-lg-12">
                           <div className="form-group">
-                            <label className="form-control-label">Password</label>
+                            <label className="form-control-label" >Password</label>
                             <input
                               id="password"
                               type="password"
