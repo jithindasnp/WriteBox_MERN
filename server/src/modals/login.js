@@ -13,7 +13,6 @@ const connectDatabase = async () => {
         const login_tb = mongoose.model('login_tb', loginSchema)
         module.exports = login_tb
         
-        console.log('Connected to mongodb database successfully!')
     } catch (err) {
         console.log(err)
     }

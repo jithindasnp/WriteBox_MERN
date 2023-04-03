@@ -10,7 +10,6 @@ const connectDatabase = async () => {
         let register = mongoose.model('register', registerSchema)
         module.exports = register
 
-        console.log('Connected to mongodb database successfully!')
     } catch (err) {
         console.log(err)
     }
