@@ -1,4 +1,4 @@
-import FacebookLogin from '../components/FacebookLogin'
+import LinkedinLogin from '../components/LinkedinLogin'
 import GoogleLogin from '../components/GoogleLogin'
 import React, { useState } from 'react'
 import axios from 'axios'
@@ -89,7 +89,7 @@ function Login() {
                                             <hr />
                                             <div className="row  mt-4">
                                                 <GoogleLogin />
-                                                <FacebookLogin />
+                                                <LinkedinLogin />
 
                                             </div>
                                             <div className="text-center dont-have">Don’t have an account? <a href="/register">Register</a></div>

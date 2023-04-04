@@ -1,10 +1,18 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
 
 export default function GoogleLogin() {
 
-    const google = () => {
+
+
+
+
+    const google = async () => {
         window.open("http://localhost:3001/auth/google", "_self")
-    };
+
+    }
+
+
 
     return (
         <>

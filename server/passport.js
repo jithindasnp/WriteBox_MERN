@@ -20,8 +20,23 @@ passport.use(
       clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL: "/auth/google/callback",
     },
-    function (accessToken, refreshToken, profile, done) {
-      done(null, profile);
+    async function (accessToken, refreshToken, profile, done) {
+      try {
+        if (profile) {
+          const user = await authRegister.findOne({ id: profile.id, provider: profile.provider })
+          if (!user) {
+            const user = await authRegister.create({ id: profile.id, name: profile.displayName, provider: profile.provider })
+            console.log("Google data added successfully");
+          } else {
+            console.log("Google data already exist");
+          }
+        } else {
+          console.log("ERROR while getting data from server");
+        }
+      } catch (error) {
+        console.log("ERROR occured==>", error);
+      }
+      return done(null, profile);
     }
   )
 );
@@ -38,21 +53,22 @@ passport.use(
       callbackURL: "/auth/linkedin/callback",
     },
     async function (accessToken, refreshToken, profile, done) {
-      const user = await authRegister.findOne({
-        id: profile.id,
-        provider: 'linkedin',
-      })
-      if (!user) {
-        console.log('Adding new linkedin user to DB..');
-        const user = await authRegister.create({ id: profile.id, name: profile.displayName, provider: profile.provider })
-        res.status(200).json({ message: "success" })
-        return done(null, profile);
-      } else {
-        console.log('Facebook User already exist in DB..');
-        res.status(400).json({ message: "already exist" })
-        return done(null, profile);
+      try {
+        if (profile) {
+          const user = await authRegister.findOne({ id: profile.id, provider: profile.provider })
+          if (!user) {
+            const user = await authRegister.create({ id: profile.id, name: profile.displayName, provider: profile.provider })
+            console.log("Linkedin data added successfully");
+          } else {
+            console.log("Linkedin data already exist");
+          }
+        } else {
+          console.log("ERROR while getting data from server");
+        }
+      } catch (error) {
+        console.log("ERROR occured==>", error);
       }
-
+      return done(null, profile);
     }
   )
 )

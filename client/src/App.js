@@ -10,11 +10,11 @@ function App() {
 
   useEffect(() => {
     console.log(123);
-    axios.get('http://localhost:3001/api/data').then((result)=>{
-      console.log("RESULT==>",result.data.data);
-    }).catch((error)=>{
-      console.log(error);
-    })
+    // axios.get('http://localhost:3001/api/data').then((result)=>{
+    //   console.log("RESULT==>",result.data.data);
+    // }).catch((error)=>{
+    //   console.log(error);
+    // })
   }, [])
   
   return (

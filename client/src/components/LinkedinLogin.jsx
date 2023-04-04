@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React from 'react'
 
-export default function FacebookLogin() {
+export default function LinkedinLogin() {
 
     const facebook = () => {
-        window.open("http://localhost:3001/auth/linkedin", "_self");
+        window.open("http://localhost:3001/auth/linkedin", "_self")
     };
 
     return (
@@ -17,10 +17,10 @@ export default function FacebookLogin() {
                     onClick={facebook}
                 >
                     <i
-                        className="fa fa-facebook-official"
+                        className="fa fa-linkedin"
                         style={{ fontSize: 18 }}
                     />{" "}
-                    Continue With Facebook
+                    Continue With Linkedin
                 </button>
             </div>
         </>

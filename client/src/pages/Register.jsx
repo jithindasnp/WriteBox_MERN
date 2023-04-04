@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import FacebookLogin from '../components/FacebookLogin'
+import LinkedinLogin from '../components/LinkedinLogin'
 import GoogleLogin from '../components/GoogleLogin'
 import axios from 'axios'
 
@@ -9,15 +8,10 @@ export default function Register() {
   const [passCheck, setpassCheck] = useState()
   const [register, setregister] = useState()
 
-  const navigate = useNavigate()
 
   const validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   const validPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$/
 
-
-  const validCheck = () => {
-
-  }
 
 
   const registerInpChange = (e) => {
@@ -147,7 +141,7 @@ export default function Register() {
                       <hr />
                       <div className="row  mt-4">
                         <GoogleLogin />
-                        <FacebookLogin />
+                        <LinkedinLogin />
                       </div>
                       <div className="account-footer text-center mt-4 mb-2">
                         Already have an account?{" "}
