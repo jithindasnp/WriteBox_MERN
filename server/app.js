@@ -1,8 +1,13 @@
 const express = require ('express')
+require("dotenv").config();
 const cors = require("cors");
 const registerRouter = require('./src/routes/registerRouter');
 const loginRouter = require('./src/routes/loginRouter');
 const app = express()
+const connection = require("./db");
+const userRoutes = require("./routes/users");
+const authRoutes = require("./routes/auth");
+
 
 const authRoute = require('./src/routes/auth')
 
@@ -18,6 +23,12 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("/public"))
+
+// database connection
+connection();
+
+
+
 
 app.use(
     cookieSession({ name: "session", keys: ["lama"], maxAge: 24 * 60 * 60 * 100 })
@@ -35,7 +46,9 @@ app.use(
   })
 );
 
-
+// routes
+app.use("/api/users", userRoutes);
+app.use("/api/auth", authRoutes);
 app.use('/api/register',registerRouter)
 app.use('/api/login',loginRouter)
 app.use("/auth",authRoute)
