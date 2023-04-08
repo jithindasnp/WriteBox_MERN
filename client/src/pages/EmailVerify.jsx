@@ -33,8 +33,8 @@ export default function EmailVerify() {
                 <div className="container emailVerifyContainer">
                     <img src={success} alt="success_img" className={styles.success_img} />
                     <h1>Email verified successfully</h1>
-                    <Link to="/login">
-                        <button className={styles.green_btn}>Login</button>
+                    <Link to="/profile">
+                        <button type="button" class="btn btn-success">Go to profile</button>
                     </Link>
                 </div>
             ) : (

@@ -23,6 +23,7 @@ function Login() {
             console.log(err);
             console.log("error occured");
         })
+        alert("Email verificaion link sent!!!")
     }
 
     const handleShow = (e)=>{

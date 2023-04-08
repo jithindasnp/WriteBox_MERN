@@ -35,7 +35,7 @@ try {
   router.get(
     "/google/callback",
     passport.authenticate("google", {
-      successRedirect: CLIENT_URL,
+      successRedirect: "http://localhost:3000/profile",
       failureRedirect: "/login/failed",
     })
   );
@@ -45,7 +45,7 @@ try {
   router.get(
     "/linkedin/callback",
     passport.authenticate("linkedin", {
-      successRedirect: CLIENT_URL,
+      successRedirect: 'http://localhost:3000/profile',
       failureRedirect: "/login/failed",
     })
   );
