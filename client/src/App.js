@@ -5,6 +5,8 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import axios from 'axios';
 import { useEffect } from 'react';
+import EmailVerify from './pages/EmailVerify';
+import Profile from './pages/Profile';
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
           <Route path='/' element={<Home />}></Route>
           <Route path='/register' element={<Register />}></Route>
           <Route path='/login' element={<Login />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
+          <Route path='/users/:id/verify/:token' element={<EmailVerify />}></Route>
         </Routes>
       </BrowserRouter>
     </>

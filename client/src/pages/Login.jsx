@@ -2,13 +2,11 @@ import LinkedinLogin from '../components/LinkedinLogin'
 import GoogleLogin from '../components/GoogleLogin'
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
 
     const [show,setShow] = useState(false)
 
-    let navigate = useNavigate();
     const [state, setState] = useState({})
     const inputValues = (event) => {
         const { name, value } = event.target

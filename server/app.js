@@ -4,9 +4,6 @@ const cors = require("cors");
 const registerRouter = require('./src/routes/registerRouter');
 const loginRouter = require('./src/routes/loginRouter');
 const app = express()
-const connection = require("./db");
-const userRoutes = require("./routes/users");
-const authRoutes = require("./routes/auth");
 
 
 const authRoute = require('./src/routes/auth')
@@ -15,7 +12,7 @@ const passport = require('passport')
 const cookieSession = require("cookie-session");
 
 
-const passportSetup = require("../server/passport.js");
+// const passportSetup = require("../server/passport.js");
 const authRouter = require('../server/passport.js');
 
 
@@ -24,8 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("/public"))
 
-// database connection
-connection();
+
 
 
 
@@ -47,8 +43,6 @@ app.use(
 );
 
 // routes
-app.use("/api/users", userRoutes);
-app.use("/api/auth", authRoutes);
 app.use('/api/register',registerRouter)
 app.use('/api/login',loginRouter)
 app.use("/auth",authRoute)
