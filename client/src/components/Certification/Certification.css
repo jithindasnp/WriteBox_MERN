@@ -1,0 +1,42 @@
+.text-box {
+    border: 1px solid black;
+}
+.aboutContainer {
+    font-family: 'Anton', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Lora', serif;
+    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.file-input {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .inputfile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    
+  }
+  #myFile{
+    color: #663399;
+  }
+  .file-choose {
+    background:transparent;
+    color: #663399;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid rgba(57, 55, 55, 0.132);
+  }
+ 
