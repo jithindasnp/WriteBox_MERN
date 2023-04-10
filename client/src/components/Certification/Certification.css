@@ -1,15 +1,6 @@
 .text-box {
     border: 1px solid black;
 }
-.aboutContainer {
-    font-family: 'Anton', sans-serif;
-    font-family: 'Fjalla One', sans-serif;
-    font-family: 'Kanit', sans-serif;
-    font-family: 'Lora', serif;
-    font-family: 'Merriweather', serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Urbanist', sans-serif;
-}
 
 .file-input {
     position: relative;

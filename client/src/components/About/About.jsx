@@ -16,7 +16,7 @@ export default function About() {
                 </label>
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control w-75"
                     id="formGroupExampleInput"
                     placeholder="Example input placeholder"
                 />
@@ -27,7 +27,7 @@ export default function About() {
                 </label>
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control w-75"
                     id="formGroupExampleInput2"
                     placeholder="Another input placeholder"
                 />
@@ -38,7 +38,7 @@ export default function About() {
                 </label>
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control w-75"
                     id="formGroupExampleInput2"
                     placeholder="Another input placeholder"
                 />
@@ -47,7 +47,7 @@ export default function About() {
                 <label htmlFor="formGroupExampleInput2" className="form-label">
                     Language Spoken
                 </label>
-                <select className="form-select" aria-label="Default select example">
+                <select className="form-select w-75" aria-label="Default select example">
                     <option selected="">English</option>
                     <option value={1}>Malayalam</option>
                     <option value={2}>Hindi</option>
@@ -61,17 +61,18 @@ export default function About() {
                 <label htmlFor="formGroupExampleInput2" className="form-label">
                     Mentorship for
                 </label>
-                <select className="form-select" aria-label="Default select example">
-                    <option selected="">PhD Mentorship</option>
-                    <option value={1}>R &amp; D Mentorship</option>
-                    <option value={2}>Skill development mentorship</option>
+                
+                <select className="form-select w-75" aria-label="Default select example">
+                    <option selected="">PhD </option>
+                    <option value={1}>R &amp; D </option>
+                    <option value={2}>Skill development </option>
                     <option value={3}>Language learning</option>
-                    <option value={3}>Enterpreanureship mentorship</option>
-                    <option value={3}>Coding Learning Mentorship</option>
-                    <option value={3}>Project Learning Mentorship</option>
-                    <option value={3}>Career development Mentorship</option>
-                    <option value={3}>Subject Mentorship</option>
-                    <option value={3}>Courses Mentorship</option>
+                    <option value={3}>Enterpreanureship </option>
+                    <option value={3}>Coding Learning </option>
+                    <option value={3}>Project Learning </option>
+                    <option value={3}>Career development </option>
+                    <option value={3}>Subject </option>
+                    <option value={3}>Courses </option>
                 </select>
             </div>
             <div className="mb-3">
@@ -80,7 +81,7 @@ export default function About() {
                 </label>
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control w-75"
                     id="formGroupExampleInput"
                     placeholder="Full stck Development"
                 />
@@ -89,7 +90,7 @@ export default function About() {
                 <label htmlFor="formGroupExampleInput2" className="form-label">
                     Describe your mentorship experience
                 </label>
-                <select className="form-select" aria-label="Default select example">
+                <select className="form-select w-75" aria-label="Default select example">
                     <option selected="">English</option>
                     <option value={1}>Malayalam</option>
                     <option value={2}>Hindi</option>
@@ -100,17 +101,17 @@ export default function About() {
                 <label htmlFor="formGroupExampleInput2" className="form-label">
                     Describe your current sitauation
                 </label>
-                <select className="form-select" aria-label="Default select example">
+                <select className="form-select w-75" aria-label="Default select example">
                     <option selected="">i have another mentorship experience</option>
                 </select>
             </div>
             <div className="mb-3">
                 <label htmlFor="formGroupExampleInput" className="form-label">
-                    Phone Number(optional)
+                <img src="/assets/images/ind flag.png" alt="" /> Phone Number(optional)
                 </label>
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control w-75"
                     id="formGroupExampleInput"
                     placeholder="Example input placeholder"
                 />
