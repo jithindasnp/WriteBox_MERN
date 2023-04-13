@@ -53,7 +53,7 @@ export default function Description() {
                     <div className="col-12"> <input type="text" className="form-control descriptionTextBox" /></div>
                     <p className='textBoxCustomPlaceholder w-50'>Book a trial lesson with me so we can discuss your goals and how I can help
                         your reach them...</p>
-                    <p className='p-0 m-0 textBoxMinWords'>400 Characters minimum. 0 characters currently</p>
+                    <p className='p-0 m-0 textBoxMinWords'>500 Characters minimum. 0 characters currently</p>
                 </div>
                 <div className="row descriptionButtons ">
                     <div className="col-12">

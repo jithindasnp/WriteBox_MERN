@@ -9,8 +9,8 @@
 }
 
 #form-file-upload {
-    height: 16rem;
-    width: 30rem;
+    height: 33rem;
+    width: 90%;
     max-width: 100%;
     text-align: center;
     position: relative;
@@ -26,10 +26,9 @@
     align-items: center;
     justify-content: center;
     border-width: 2px;
-    border-radius: 1rem;
     border-style: dashed;
     border-color: #cbd5e1;
-    background-color: #f8fafc;
+    background-color: white;
 }
 
 .upload-button {
@@ -44,3 +43,24 @@
 .upload-button:hover {
     text-decoration-line: underline;
 }
+
+.profilePicbBackBtn {
+    outline: 1px solid #663399;
+    border: none;
+    background-color: transparent;
+    color: #663399;
+    width: 90px;
+    height: 40px;
+}
+
+.profilePicbNextBtn {
+    border: none;
+    background-color: #663399;
+    color: white;
+    width: 90px;
+    height: 40px;
+}
+.clrViolet {
+    color: #663399;
+}
+
