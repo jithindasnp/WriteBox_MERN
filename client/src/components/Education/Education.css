@@ -31,4 +31,7 @@
     display: inline-block;
     border: 1px solid rgba(57, 55, 55, 0.132);
   }
- 
+ .back-button{
+  margin-top: 500px;
+  margin-left: 10px;
+ }

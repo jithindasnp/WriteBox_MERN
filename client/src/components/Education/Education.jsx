@@ -159,7 +159,7 @@ function Education() {
                     <div className="row">
                         <div className="col-3">
                             <button type="button" class="btn btn-outline" style={{ color: "#663399" }}>Back</button>
-                            <button type="button" class="btn btn-outline px-1" style={{ backgroundColor: "#663399", color: 'white', width: '50px' }}>Next</button>
+                            <button type="button" class="btn back-button btn-outline px-1" style={{ backgroundColor: "#663399", color: 'white', width: '50px' }}>Next</button>
                         </div>
                     </div>
                 </div>
