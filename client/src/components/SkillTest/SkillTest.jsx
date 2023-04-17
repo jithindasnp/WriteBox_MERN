@@ -26,8 +26,8 @@ export default function SkillTest() {
                                     className="form-control bg-white"
                                     id="formGroupExampleInput2"
                                     value="PhD Mentorship"
-                                    disabled 
-                                    
+                                    disabled
+
                                 />
                             </div>
                         </div>
@@ -102,10 +102,10 @@ export default function SkillTest() {
             </div>
 
             <div className="mt-5 " >
-                <div className="row justify-content-center align-items-center">
-                    <div className="col-3">
-                        <button type="button" class="btn btn-outline file-choose" style={{ color: "#663399" }}>Back</button>
-                        <button type="button" class="btn btn-outline ms-3" style={{ backgroundColor: "#663399", color: 'white', width: '60px' }}>Next</button>
+                <div className="row skillTestBtnRow">
+                    <div className="col-sm-12 col d-flex justify-content-start">
+                        <button type="button" class="skillBackBtn rounded-1">Back</button>
+                        <button type="button" class="skillNextButn ms-3 rounded-1">Next</button>
                     </div>
                 </div>
             </div>

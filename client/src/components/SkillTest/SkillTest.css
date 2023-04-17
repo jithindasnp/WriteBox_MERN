@@ -1,63 +1,90 @@
-
-    .test-button{
+.test-button {
     height: 51px;
     width: 189px;
     border-radius: 0px;
     background: #663399;
-    
+
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
     color: white;
-    
-    }
-    .record-btn{
+
+}
+
+.record-btn {
     width: 214px;
     height: 50px;
     background: #663399;
     color: white;
-    
-    }
-    .link-text{
-        font-size: 20px;
-        font-weight: 400;   
-    }
-    .heading-text{
-    
+
+}
+
+.link-text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.heading-text {
+
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    
-    }
-    .video-tag{
-    
+
+}
+
+.video-tag {
+
     font-size: 22px;
     font-weight: 500;
     line-height: 33px;
     letter-spacing: 0em;
     text-align: left;
-    
-    }
-    .image-vid{
+
+}
+
+.image-vid {
     width: 25rem;
-    height: 15rem; 
-    }
-    .thumbnail-btn{
-        width: 214px;
-        height: 50px;
-        background:white;
-        color: #663399;  
-    }
-    .add-thumbnail-text{
-        font-size: 20px;
-        font-weight: 400; 
-        font-weight: bold; 
-    }
-    .sub-heading{
-        font-size: 20px;
-        font-weight: 400; 
-        font-weight: bold;
-    }
-    .do-para{
-        opacity: 0.8;
-    }
+    height: 15rem;
+}
+
+.thumbnail-btn {
+    width: 214px;
+    height: 50px;
+    background: white;
+    color: #663399;
+}
+
+.add-thumbnail-text {
+    font-size: 20px;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+.sub-heading {
+    font-size: 20px;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+.do-para {
+    opacity: 0.8;
+}
+
+.skillTestBtnRow {
+    margin-top: 200px;
+}
+
+.skillNextButn {
+    width: 100px;
+    background-color: #663399;
+    border: none;
+    color: white;
+}
+.skillBackBtn{
+    outline: 1px solid #663399 !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: #663399 !important;
+    width: 90px;
+    height: 40px;
+}

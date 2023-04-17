@@ -111,7 +111,7 @@ export default function Pricing() {
             <div className="row pricingButtons my-5 ">
                 <div className="col-sm-12 col d-flex justify-content-center">
                     <button type="button" class="backBtn rounded-1">Back</button>
-                    <button type="button" class="completeBtn ms-3 rounded-1">Compete Registration</button>
+                    <button type="button" class="completeBtn ms-3 rounded-1">Complete Registration</button>
                 </div>
             </div>
         </div>

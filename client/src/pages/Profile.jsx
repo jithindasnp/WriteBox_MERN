@@ -6,6 +6,7 @@ import VideoIntro from '../components/Video/VideoInto'
 import Description from '../components/Description/Description'
 import ProfilePic from '../components/Photo/ProfilePic'
 import Pricing from '../components/Pricing/Pricing'
+import SkillTest from '../components/SkillTest/SkillTest'
 
 export default function Profile() {
     return (
@@ -13,10 +14,11 @@ export default function Profile() {
             <Topbar />
             {/* <Description/> */}
             {/* <ProfilePic /> */}
+            <SkillTest/>
             {/* <About /> */}
             {/* <Test/> */}
             {/* <VideoIntro/> */}
-            <Pricing/>
+            {/* <Pricing/> */}
         </>
     )
 }
