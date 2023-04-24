@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-mongoose.connect('mongodb+srv://jithindaswritebox:writebox@cluster0.88ramux.mongodb.net/WRITEBOX_DB?retryWrites=true&w=majority')
 
+mongoose.connect(process.env.DB)
 const tokenSchema = new Schema({
 	userId: {
 		type: Schema.Types.ObjectId,

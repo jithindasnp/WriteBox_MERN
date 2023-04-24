@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-mongoose.connect('mongodb+srv://jithindaswritebox:writebox@cluster0.88ramux.mongodb.net/WRITEBOX_DB?retryWrites=true&w=majority')
+mongoose.connect(process.env.DB)
 const userSchema = new mongoose.Schema({
 	firstName: { type: String, required: true },
 	lastName: { type: String, required: true },
